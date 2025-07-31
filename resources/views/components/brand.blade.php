@@ -1,28 +1,30 @@
-<div class="bg-black text-white py-12 px-6">
-    <div class="max-w-6xl mx-auto text-center">
-        <h2 class="text-2xl md:text-3xl font-semibold mb-4 text-[#FFB71A]">
-            Together with Our Amazing Clients, We Build Digital Solutions That Make a Difference
-        </h2>
+<!-- Tambahkan ini di layout (biasanya di layouts/app.blade.php) -->
+<!-- AOS Animation CSS & JS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    AOS.init({ once: true });
+  });
+</script>
 
-        <div class="flex justify-center mt-10">
-            <div class="grid grid-cols-2 sm:grid-cols-3 gap-6">
-                <!-- Logo Brand -->
-                <div class="flex justify-center items-end mx-2">
-                    <div class="bg-[#FFB71A] rounded-xl p-4 flex items-center justify-center w-32 h-16">
-                        <img src="{{ asset('Images/brand/Brand1.png') }}" alt="Brand 1" class="h-12 object-contain">
-                    </div>
-                </div>
-                <div class="flex justify-center items-end mx-2">
-                    <div class="bg-[#FFB71A] rounded-xl p-4 flex items-center justify-center w-32 h-16">
-                        <img src="{{ asset('Images/brand/Brand2.png') }}" alt="Brand 2" class="h-12 object-contain">
-                    </div>
-                </div>
-                <div class="flex justify-center items-end mx-2">
-                    <div class="bg-[#FFB71A] rounded-xl p-4 flex items-center justify-center w-32 h-16">
-                        <img src="{{ asset('Images/brand/Brand3.png') }}" alt="Brand 3" class="h-12 object-contain">
-                    </div>
-                </div>
-            </div>
+<!-- Komponen Utama -->
+<div class="bg-black text-white py-16 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2 
+      class="text-2xl sm:text-3xl md:text-4xl font-bold mb-10 text-[#FFB71A]" 
+      data-aos="fade-up"
+    >
+      Together with Our Amazing Clients, We Build Digital Solutions That Make a Difference
+    </h2>
+
+    <!-- Grid Logo Brand -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 justify-items-center" data-aos="zoom-in-up">
+      @foreach (['Brand1', 'Brand2', 'Brand3', 'Brand1'] as $brand)
+        <div class="w-32 h-16 bg-[#FFB71A] rounded-xl flex items-center justify-center shadow-md hover:scale-105 transition-transform duration-300">
+          <img src="{{ asset('Images/brand/' . $brand . '.png') }}" alt="{{ $brand }}" class="h-10 object-contain">
         </div>
+      @endforeach
     </div>
+  </div>
 </div>

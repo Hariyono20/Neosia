@@ -27,89 +27,82 @@
     ];
 @endphp
 
-<div class="bg-[#FFB71A] text-black py-16 px-6">
-    <div class="max-w-6xl mx-auto">
+<!-- Tambahkan ini di layout Anda (sekali saja) -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => AOS.init({ once: true }));
+</script>
 
-        {{-- Header --}}
-        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-12">
+<!-- Section Produk -->
+<div class="bg-[#FFB71A] text-black py-20 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
+
+        <!-- Header -->
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-12" data-aos="fade-up">
             <div>
-                <h2 class="text-3xl md:text-4xl font-bold mb-2">Produk Unggulan Kami</h2>
-                <p class="text-gray-800">Temukan berbagai produk terbaik yang telah kami bantu kembangkan dengan bangga.</p>
+                <h2 class="text-3xl sm:text-4xl font-bold mb-2">Find the Right Program for Your Career</h2>
+                <p class="text-gray-800 max-w-2xl">
+                    Choose from our range of expert-designed SolidWorks certification programs tailored to aerospace, automotive, and structural engineering specializations.
+                </p>
             </div>
-            <a href="#" class="mt-4 md:mt-0 inline-block border border-black text-black px-5 py-2 rounded hover:bg-black hover:text-white transition">
+            <a href="#"
+               class="inline-block border border-black text-black px-5 py-2 rounded hover:bg-black hover:text-white transition">
                 See More Courses
             </a>
         </div>
 
-        {{-- Produk Grid --}}
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+        <!-- Product Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" data-aos="fade-up" data-aos-delay="100">
             @foreach ($products as $product)
-                <div class="bg-[#12474D] rounded-[24px] shadow-lg p-6 flex flex-col justify-between text-white min-h-[500px]">
+                <div class="bg-[#12474D] rounded-3xl shadow-lg p-6 flex flex-col justify-between text-white min-h-[500px] transition-transform hover:scale-[1.02] duration-300">
 
-                    {{-- Gambar diperbesar dan seragam --}}
-                    <img src="{{ asset('Images/' . $product['image']) }}" alt="{{ $product['name'] }}" class="w-full h-72 object-cover rounded-xl mb-4">
+                    <!-- Gambar -->
+                    <img src="{{ asset('Images/' . $product['image']) }}" alt="{{ $product['name'] }}"
+                         class="w-full h-64 object-cover rounded-xl mb-4">
 
-                    <div class="text-start">
-                        {{-- Judul warna kuning --}}
-                        <h3 class="text-xl font-bold mb-2 text-[#FFB71A]">{{ $product['name'] }}</h3>
+                    <!-- Informasi Produk -->
+                    <div class="flex-1">
+                        <h3 class="text-xl font-bold text-[#FFB71A] mb-2">{{ $product['name'] }}</h3>
+                        <p class="text-gray-300 mb-4 text-sm leading-relaxed">{{ $product['description'] }}</p>
 
-                        <p class="text-gray-300 mb-4">{{ $product['description'] }}</p>
-
-                        {{-- Info Produk --}}
-                        <div class="flex justify-around mt-4 text-sm divide-x divide-gray-300">
-                            {{-- Price --}}
-                            {{-- Price --}}
-                            <div class="flex-1 px-2 flex flex-col items-center text-center">
-                                <div class="flex items-center gap-1">
-                                    <i class="fa-solid fa-dollar-sign"></i>
-                                    <span class="font-light text-gray-200">Price</span> {{-- Font tipis --}}
+                        <!-- Info Detail -->
+                        <div class="grid grid-cols-3 gap-2 text-center text-sm text-gray-200 border-t border-gray-600 pt-4">
+                            <div>
+                                <div class="flex justify-center items-center gap-1">
+                                    <i class="fa-solid fa-dollar-sign"></i> <span>Price</span>
                                 </div>
-                                <span class="mt-1 font-semibold text-[#FFB71A]">Rp {{ number_format($product['price'], 0, ',', '.') }}</span>
+                                <div class="text-[#FFB71A] font-semibold mt-1">Rp {{ number_format($product['price'], 0, ',', '.') }}</div>
                             </div>
-
-                            {{-- Week --}}
-                            <div class="flex-1 px-2 flex flex-col items-center text-center">
-                                <div class="flex items-center gap-1">
-                                    <i class="fa-regular fa-calendar"></i>
-                                    <span class="font-light text-gray-200">Week</span> {{-- Font tipis --}}
+                            <div>
+                                <div class="flex justify-center items-center gap-1">
+                                    <i class="fa-regular fa-calendar"></i> <span>Week</span>
                                 </div>
-                                <span class="mt-1 font-semibold text-[#FFB71A]">{{ $product['week'] }}</span>
+                                <div class="text-[#FFB71A] font-semibold mt-1">{{ $product['week'] }}</div>
                             </div>
-
-                            {{-- Rating --}}
-                            <div class="flex-1 px-2 flex flex-col items-center text-center">
-                                <div class="flex items-center gap-1">
-                                    <i class="fa-regular fa-star"></i>
-                                    <span class="font-light text-gray-200">Rating</span> {{-- Font tipis --}}
+                            <div>
+                                <div class="flex justify-center items-center gap-1">
+                                    <i class="fa-regular fa-star"></i> <span>Rating</span>
                                 </div>
-                                <span class="mt-1 font-semibold text-[#FFB71A]">{{ $product['rating'] }}</span>
+                                <div class="text-[#FFB71A] font-semibold mt-1">{{ $product['rating'] }}</div>
                             </div>
-
-
-
                         </div>
-
                     </div>
 
-                   {{-- Tombol --}}
-                    <div class="mt-6 flex justify-center gap-2">
-                        {{-- Tombol Read More dengan teks kuning tua --}}
+                    <!-- Tombol -->
+                    <div class="mt-6 flex flex-wrap justify-center gap-2">
                         <a href="#"
-                        class="border border-[#FFB71A] text-[#FFB71A] px-3 py-1.5 rounded-md text-sm font-medium hover:bg-white hover:text-black transition duration-200">
+                           class="border border-[#FFB71A] text-[#FFB71A] px-4 py-2 rounded-md text-sm font-medium hover:bg-white hover:text-black transition duration-200">
                             Read More
                         </a>
-
-                        {{-- Tombol Download Brochure dengan latar putih dan teks kuning tua --}}
                         <a href="#"
-                        class="bg-white text-[#FFB71A] border border-[#FFB71A] px-6 py-1.5 rounded-md text-sm font-medium hover:bg-[#FFB71A] hover:text-white transition duration-200">
+                           class="bg-white text-[#FFB71A] border border-[#FFB71A] px-4 py-2 rounded-md text-sm font-medium hover:bg-[#FFB71A] hover:text-white transition duration-200">
                             Download Brochure
                         </a>
                     </div>
 
-
                 </div>
             @endforeach
         </div>
-
     </div>
 </div>
