@@ -8,17 +8,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     @vite('resources/css/app.css')
 </head>
-<body class="bg-transparent text-white">
+<body>
     @include('components.navbar')
-    @yield('content')
-    @include('components.mitra')
-    @include('pages.feature')
-    @include('components.brand')
-    @include('pages.produk')
-    @include('components.gallery')
-    @include('components.event')
-    @include('components.testimonials')
-    @include('components.artikel')
+    @include('components.layanan.hero')
+    @include('components.layanan.konsultasi')
+    @include('components.layanan.pelatihan')
+    @include('components.layanan.about-ansys')
     @include('pages.contact') 
     @include('components.footer')
 </body>

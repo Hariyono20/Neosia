@@ -19,3 +19,5 @@ Route::redirect('/', '/dashboard'); // Auto-redirect ke dashboard
 Route::get('/dashboard', function () {
     return view('pages.dashboard');
 });
+
+Route::view('/service', 'layouts.service')->name('service');

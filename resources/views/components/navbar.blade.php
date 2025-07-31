@@ -1,4 +1,3 @@
-<!-- resources/views/components/navbar.blade.php -->
 <nav class="fixed top-0 left-0 w-full z-50 bg-transparent text-white">
   <div class="flex items-center justify-between px-6 lg:px-20 py-4">
     <!-- Logo -->
@@ -29,18 +28,19 @@
 
       <!-- Dropdown Menus -->
       @foreach ([
-        'Courses' => ['Course A', 'Course B'],
-        'Layanan' => ['Konsultasi', 'Pelatihan'],
-        'Product' => ['Produk A', 'Produk B'],
-        'Blog' => ['Artikel Terbaru', 'Tips & Trik']
+        'Courses' => ['Course A' => '#', 'Course B' => '#'],
+        'Layanan' => [
+          'Service' => url('/service#hero'),],
+        'Product' => ['Produk A' => '#', 'Produk B' => '#'],
+        'Blog' => ['Artikel Terbaru' => '#', 'Tips & Trik' => '#'],
       ] as $menu => $submenus)
         <li class="relative group">
           <a href="#" class="flex items-center hover:text-yellow-400">
             {{ $menu }} <i class="bi bi-chevron-down text-xs ml-1"></i>
           </a>
-          <div class="absolute hidden group-hover:block bg-white text-black mt-2 rounded shadow w-44 z-50">
-            @foreach ($submenus as $submenu)
-              <a href="#" class="block px-4 py-2 hover:bg-gray-100">{{ $submenu }}</a>
+          <div class="absolute left-0 mt-2 w-44 bg-white text-black rounded shadow z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+            @foreach ($submenus as $label => $link)
+              <a href="{{ $link }}" class="block px-4 py-2 hover:bg-gray-100">{{ $label }}</a>
             @endforeach
           </div>
         </li>
@@ -48,7 +48,7 @@
 
       <!-- Moved Items -->
       <li><a href="#" class="hover:text-yellow-400">Check Certificate</a></li>
-      <li><a href="#" class="hover:text-yellow-400">Contact</a></li>
+      <li><a href="{{ url('/contact') }}" class="hover:text-yellow-400">Contact</a></li>
     </ul>
 
     <!-- Actions -->
@@ -70,18 +70,21 @@
       <!-- Static Item -->
       <li><a href="#" class="block hover:text-yellow-400">About</a></li>
 
-      <!-- Dropdown Menus -->
+      <!-- Dropdown Menus Mobile -->
       @foreach ([
-        'Courses' => ['Course A', 'Course B'],
-        'Layanan' => ['Konsultasi', 'Pelatihan'],
-        'Product' => ['Produk A', 'Produk B'],
-        'Blog' => ['Artikel Terbaru', 'Tips & Trik']
+        'Courses' => ['Course A' => '#', 'Course B' => '#'],
+        'Layanan' => [
+          'Konsultasi' => url('/service#konsultasi'),
+          'Pelatihan' => url('/service#pelatihan'),
+        ],
+        'Product' => ['Produk A' => '#', 'Produk B' => '#'],
+        'Blog' => ['Artikel Terbaru' => '#', 'Tips & Trik' => '#'],
       ] as $menu => $submenus)
         <li>
           <span class="font-medium block">{{ $menu }}</span>
           <ul class="ml-4 space-y-1 text-sm text-yellow-300">
-            @foreach ($submenus as $submenu)
-              <li><a href="#" class="block hover:text-yellow-200">{{ $submenu }}</a></li>
+            @foreach ($submenus as $label => $link)
+              <li><a href="{{ $link }}" class="block hover:text-yellow-200">{{ $label }}</a></li>
             @endforeach
           </ul>
         </li>
@@ -89,7 +92,7 @@
 
       <!-- Moved Items -->
       <li><a href="#" class="block hover:text-yellow-400">Check Certificate</a></li>
-      <li><a href="#" class="block hover:text-yellow-400">Contact</a></li>
+      <li><a href="{{ url('/contact') }}" class="hover:text-yellow-400">Contact</a></li>
     </ul>
 
     <!-- Mobile Action Buttons -->
