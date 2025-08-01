@@ -21,3 +21,5 @@ Route::get('/dashboard', function () {
 });
 
 Route::view('/service', 'layouts.service')->name('service');
+
+Route::view('/daftar-course', 'layouts.course-layout')->name('daftar.course');
