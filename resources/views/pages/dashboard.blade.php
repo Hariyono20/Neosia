@@ -3,14 +3,14 @@
 @section('title', 'Dashboard')
 
 @section('content')
-  <div class="relative w-full min-h-screen bg-[#12474D] overflow-hidden text-white pt-28 px-4 sm:px-6 lg:px-20 lg:py-28">
+  <div class="relative w-full bg-[#12474D] overflow-hidden text-white pt-28 px-4 sm:px-6 lg:px-20 lg:py-28">
 
     {{-- Background --}}
-    <div class="absolute inset-0 z-0">
+    <div class="absolute inset-0 z-0 h-full">
       <img 
         src="{{ asset('Images/Home1.png') }}" 
         alt="Background" 
-        class="w-full h-full object-cover brightness-[.6] saturate-150"
+        class="w-full h-full object-cover brightness-[.6] saturate-150 sm:h-[500px] md:h-auto"
       >
       <div class="absolute inset-0 bg-[#12474D]/70 mix-blend-multiply"></div>
     </div>

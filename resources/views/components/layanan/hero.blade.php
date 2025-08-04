@@ -1,10 +1,10 @@
-<section class="relative w-full min-h-[90vh] text-white flex items-center">
-  <!-- Background Image -->
-  <img src="{{ asset('Images/service/hero.png') }}" alt="Service Background" class="absolute inset-0 w-full h-full object-cover z-0">
+<section class="relative w-full text-white flex items-center" style="background-image: url('{{ asset('Images/service/hero.png') }}'); background-size: cover; background-position: center;">
+  <!-- Overlay opsional untuk efek gelap -->
+  <div class="absolute inset-0 bg-black bg-opacity-60 z-0"></div>
 
-  <!-- Content full kiri -->
+  <!-- Konten -->
   <div class="relative z-10 w-full">
-    <div class="pl-4 sm:pl-6 md:pl-10 lg:pl-16 pr-4 py-10 space-y-4 text-left">
+    <div class="pl-4 sm:pl-6 md:pl-10 lg:pl-16 pr-4 py-16 min-h-[800px] flex flex-col justify-center space-y-4 text-left">
       <div class="flex flex-wrap items-end gap-2 sm:gap-4">
         <h2 class="text-3xl sm:text-4xl font-black uppercase leading-tight">NEOSIA</h2>
         <span class="text-xl sm:text-2xl md:text-3xl font-mono tracking-wide uppercase">Service</span>

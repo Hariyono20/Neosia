@@ -1,23 +1,25 @@
 <!-- CEO Section -->
-<section class="bg-black py-16 px-4 sm:px-8 lg:px-20">
+<section class="bg-black py-20 px-4 sm:px-6 lg:px-16">
     <div class="max-w-7xl mx-auto">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
 
-            <!-- Kiri: Judul dan Deskripsi -->
-            <div>
-                <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-[#FFB71A] leading-tight">
-                    Meet the<br class="hidden md:block">
-                    Experts Behind<br class="hidden md:block">
+        <!-- Layout 2 kolom -->
+        <div class="grid grid-cols-1 xl:grid-cols-[1fr_1.8fr] gap-12 items-start">
+
+            <!-- KIRI: Judul dan Deskripsi -->
+            <div class="text-left">
+                <h2 class="text-4xl sm:text-5xl font-bold mb-6 text-[#FFB71A] leading-tight">
+                    Meet the<br>
+                    Experts Behind<br>
                     Neosia
                 </h2>
-                <p class="text-gray-300 text-base leading-relaxed">
+                <p class="text-gray-300 text-lg leading-relaxed max-w-md">
                     Our team of certified trainers brings years of real-world experience to help you learn faster and smarter — whether you're just starting out or leveling up.
                 </p>
             </div>
 
-            <!-- Kanan: Grid CEO -->
-            <div>
-                <div class="grid sm:grid-cols-2 gap-6">
+            <!-- KANAN: Grid CEO -->
+            <div class="-ml-4 sm:-ml-6"> <!-- Tarik grid lebih ke kiri -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 xl:gap-10">
                     @php
                         $ceos = [
                             [
@@ -56,21 +58,29 @@
                     @endphp
 
                     @foreach ($ceos as $ceo)
-                        <div class="bg-[#12474D] rounded-2xl shadow-md p-5 text-white flex flex-col h-full">
-                            <img src="{{ $ceo['img'] }}" alt="{{ $ceo['name'] }}" class="w-full h-52 sm:h-56 object-cover rounded-xl mb-4" />
-
-                            <div class="mb-4">
-                                <h3 class="text-sm font-semibold text-[#FFB71A] mb-1">{{ $ceo['role'] }}</h3>
-                                <p class="text-gray-200 text-sm">{{ $ceo['description'] }}</p>
+                        <div class="bg-[#12474D] rounded-2xl shadow-xl p-8 text-white flex flex-col items-start text-start h-full hover:scale-[1.02] transition-transform duration-300">
+                            <!-- Gambar -->
+                            <div class="w-full aspect-[3/2] mb-4">
+                                <img src="{{ $ceo['img'] }}" alt="{{ $ceo['name'] }}"
+                                    class="w-full h-full object-cover rounded-xl" />
                             </div>
 
-                            <div class="mt-auto border border-[#FFB71A] rounded-xl p-3 flex items-center justify-between gap-3">
-                                <div>
+                            <!-- Deskripsi -->
+                            <div class="mb-4 space-y-2">
+                                <h3 class="text-xl font-semibold text-[#FFB71A]">{{ $ceo['role'] }}</h3>
+                                <p class="text-gray-200 text-sm leading-relaxed">
+                                    {{ $ceo['description'] }}
+                                </p>
+                            </div>
+
+                            <!-- Footer -->
+                            <div class="mt-auto w-full border border-[#FFB71A] rounded-xl p-4 flex items-center justify-between gap-4">
+                                <div class="text-start">
                                     <div class="text-sm font-bold text-[#FFB71A]">{{ $ceo['name'] }}</div>
                                     <div class="text-xs text-gray-300">Technical Trainer</div>
                                 </div>
                                 <a href="{{ $ceo['linkedin'] }}" target="_blank"
-                                    class="text-xs border border-[#FFB71A] text-[#FFB71A] hover:bg-[#FFB71A] hover:text-[#12474D] px-4 py-1 rounded-full transition duration-200">
+                                    class="text-xs border border-[#FFB71A] text-[#FFB71A] hover:bg-[#FFB71A] hover:text-[#12474D] px-4 py-1 rounded-full transition duration-200 whitespace-nowrap">
                                     LinkedIn
                                 </a>
                             </div>
@@ -80,5 +90,6 @@
             </div>
 
         </div>
+
     </div>
 </section>

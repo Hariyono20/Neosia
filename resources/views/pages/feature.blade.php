@@ -1,6 +1,6 @@
 <!-- resources/views/pages/feature.blade.php -->
-<div class="bg-[#12474D] text-white">
-  <!-- Gambar Besar -->
+<div id="feature" class="bg-[#12474D] text-white">
+
   <div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10">
     <div class="h-[500px] w-full rounded-xl overflow-hidden bg-cover bg-center"
          style="background-image: url('{{ asset('Images/Feature.png') }}');">
