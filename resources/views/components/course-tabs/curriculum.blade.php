@@ -1,5 +1,5 @@
 <div class="space-y-6">
-    <h2 class="text-xl sm:text-2xl font-semibold text-white opacity-80">Curriculum</h2>
+    <h2 class="text-xl sm:text-2xl font-semibold text-[#FFB71A]">Curriculum</h2>
 
     @foreach (['Week 1' => [
         ['type' => 'Reading', 'title' => 'Ut enim ad minim veniam', 'duration' => '14 minutes', 'quiz' => true],

@@ -6,20 +6,26 @@
             <!-- Mobile: gambar bertumpuk biasa -->
             <div class="flex flex-col space-y-6 lg:hidden">
                 <img src="{{ asset('Images/service/A1.png') }}" alt="ANSYS Background"
-                     class="w-full max-w-md mx-auto aspect-[4/3] object-cover rounded-2xl shadow-lg"
+                     class="w-full max-w-md mx-auto aspect-[4/3] object-cover rounded-2xl shadow-lg
+                            transition duration-500 ease-in-out transform hover:scale-105 hover:-translate-y-1.5 will-change-transform"
                      data-aos="fade-up" data-aos-delay="100" data-aos-duration="800" />
+
                 <img src="{{ asset('Images/service/A2.png') }}" alt="ANSYS Foreground"
-                     class="w-full max-w-md mx-auto aspect-[6/4] object-cover rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-500"
+                     class="w-full max-w-md mx-auto aspect-[6/4] object-cover rounded-2xl shadow-2xl
+                            transition duration-500 ease-in-out transform hover:scale-105 hover:-translate-y-1.5 will-change-transform"
                      data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" />
             </div>
 
             <!-- Desktop: gambar ditumpuk pakai absolute -->
             <div class="hidden lg:block relative w-full h-[30rem]">
                 <img src="{{ asset('Images/service/A1.png') }}" alt="ANSYS Background"
-                     class="absolute top-0 left-0 w-[24rem] aspect-[4/3] object-cover rounded-2xl shadow-lg"
+                     class="absolute top-0 left-0 w-[24rem] aspect-[4/3] object-cover rounded-2xl shadow-lg
+                            transition duration-500 ease-in-out transform hover:scale-105 hover:-translate-y-1.5 will-change-transform"
                      data-aos="fade-right" data-aos-delay="100" data-aos-duration="800" />
+
                 <img src="{{ asset('Images/service/A2.png') }}" alt="ANSYS Foreground"
-                     class="absolute top-48 left-40 w-[24rem] aspect-[6/4] object-cover rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-500"
+                     class="absolute top-48 left-40 w-[24rem] aspect-[6/4] object-cover rounded-2xl shadow-2xl
+                            transition duration-500 ease-in-out transform hover:scale-105 hover:-translate-y-1.5 will-change-transform"
                      data-aos="fade-left" data-aos-delay="200" data-aos-duration="800" />
             </div>
         </div>

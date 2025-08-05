@@ -37,22 +37,22 @@
         </div>
 
         <!-- KANAN: Gambar Grid -->
-        <!-- KANAN: Gambar Grid -->
         <div class="grid grid-cols-2 gap-8">
-            <div class="aspect-square w-full bg-white rounded-xl overflow-hidden shadow-lg translate-y-6">
-                <img src="{{ asset('Images/service/K1.png') }}" class="w-full h-full object-cover" alt="Image 1">
-            </div>
-            <div class="aspect-square w-full bg-white rounded-xl overflow-hidden shadow-lg -translate-y-6">
-                <img src="{{ asset('Images/service/K2.png') }}" class="w-full h-full object-cover" alt="Image 2">
-            </div>
-            <div class="aspect-square w-full bg-white rounded-xl overflow-hidden shadow-lg translate-y-6">
-                <img src="{{ asset('Images/service/K3.png') }}" class="w-full h-full object-cover" alt="Image 3">
-            </div>
-            <div class="aspect-square w-full bg-white rounded-xl overflow-hidden shadow-lg -translate-y-6">
-                <img src="{{ asset('Images/service/K4.png') }}" class="w-full h-full object-cover" alt="Image 4">
-            </div>
-        </div>
+            @php
+                $images = ['K1.png', 'K2.png', 'K3.png', 'K4.png'];
+                $translate = ['translate-y-6', '-translate-y-6', 'translate-y-6', '-translate-y-6'];
+            @endphp
 
+            @foreach ($images as $index => $img)
+                <div
+                    class="aspect-square w-full bg-white rounded-xl overflow-hidden shadow-lg {{ $translate[$index] }}
+                           transition duration-500 ease-in-out transform hover:scale-105 hover:shadow-2xl">
+                    <img src="{{ asset('Images/service/' . $img) }}"
+                         class="w-full h-full object-cover"
+                         alt="Image {{ $index + 1 }}">
+                </div>
+            @endforeach
+        </div>
 
     </div>
 </section>

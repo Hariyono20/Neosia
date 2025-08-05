@@ -26,7 +26,7 @@
     <!-- Bagian 2 -->
     <div class="flex flex-col gap-6">
       <div>
-        <div class="w-16 h-16 flex items-center justify-center rounded-full bg-[#4F46E5] mb-4">
+        <div class="w-16 h-16 flex items-center justify-center rounded-full bg-[#4F46E5] mb-4 transition-transform duration-300 hover:scale-110 hover:rotate-6">
           <i class="fa-regular fa-pen-to-square text-xl"></i>
         </div>
         <h3 class="text-xl font-semibold text-[#FFB71A] mb-2">1500+ Courses</h3>
@@ -34,7 +34,7 @@
       </div>
 
       <div>
-        <div class="w-16 h-16 flex items-center justify-center rounded-full bg-[#4F46E5] mb-4">
+        <div class="w-16 h-16 flex items-center justify-center rounded-full bg-[#4F46E5] mb-4 transition-transform duration-300 hover:scale-110 hover:-rotate-6">
           <i class="fas fa-copy text-xl"></i>
         </div>
         <h4 class="text-lg font-semibold text-[#FFB71A] mb-2">10+ Lessons</h4>
@@ -45,7 +45,7 @@
     <!-- Bagian 3 -->
     <div class="flex flex-col gap-6">
       <div>
-        <div class="w-16 h-16 flex items-center justify-center rounded-full bg-[#4F46E5] mb-4">
+        <div class="w-16 h-16 flex items-center justify-center rounded-full bg-[#4F46E5] mb-4 transition-transform duration-300 hover:scale-110 hover:rotate-6">
           <i class="fa-solid fa-display text-xl"></i>
         </div>
         <h3 class="text-xl font-semibold text-[#FFB71A] mb-2">200+ Free Videos</h3>
@@ -53,7 +53,7 @@
       </div>
 
       <div>
-        <div class="w-16 h-16 flex items-center justify-center rounded-full bg-[#4F46E5] mb-4">
+        <div class="w-16 h-16 flex items-center justify-center rounded-full bg-[#4F46E5] mb-4 transition-transform duration-300 hover:scale-110 hover:-rotate-6">
           <i class="fas fa-chalkboard-teacher text-xl"></i>
         </div>
         <h4 class="text-lg font-semibold text-[#FFB71A] mb-2">Quality Teachers</h4>

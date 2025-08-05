@@ -80,7 +80,7 @@
                                     <div class="text-xs text-gray-300">Technical Trainer</div>
                                 </div>
                                 <a href="{{ $ceo['linkedin'] }}" target="_blank"
-                                    class="text-xs border border-[#FFB71A] text-[#FFB71A] hover:bg-[#FFB71A] hover:text-[#12474D] px-4 py-1 rounded-full transition duration-200 whitespace-nowrap">
+                                    class="text-xs font-bold border border-[#FFB71A] text-[#FFB71A] hover:bg-[#FFB71A] hover:text-[#12474D] px-4 py-1 rounded-md transition duration-200 whitespace-nowrap">
                                     LinkedIn
                                 </a>
                             </div>
