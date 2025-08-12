@@ -13,13 +13,15 @@
                     Neosia
                 </h2>
                 <p class="text-gray-300 text-lg leading-relaxed max-w-md">
-                    Our team of certified trainers brings years of real-world experience to help you learn faster and smarter — whether you're just starting out or leveling up.
+                    Our team of certified trainers brings years of real-world experience to help you learn faster and
+                    smarter — whether you're just starting out or leveling up.
                 </p>
             </div>
 
             <!-- KANAN: Grid CEO -->
-            <div class="-ml-4 sm:-ml-6"> <!-- Tarik grid lebih ke kiri -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 xl:gap-10">
+            <div class="-ml-4 sm:-ml-6">
+                <div
+                    class="flex gap-6 overflow-x-auto pb-4 sm:grid sm:grid-cols-2 md:gap-8 xl:gap-10 sm:overflow-visible">
                     @php
                         $ceos = [
                             [
@@ -58,7 +60,9 @@
                     @endphp
 
                     @foreach ($ceos as $ceo)
-                        <div class="bg-[#12474D] rounded-2xl shadow-xl p-8 text-white flex flex-col items-start text-start h-full hover:scale-[1.02] transition-transform duration-300">
+                        <div
+                            class="bg-[#12474D] rounded-2xl shadow-xl p-8 text-white flex flex-col items-start text-start h-full hover:scale-[1.02] transition-transform duration-300 
+                                    flex-shrink-0 w-80 sm:w-auto">
                             <!-- Gambar -->
                             <div class="w-full aspect-[3/2] mb-4">
                                 <img src="{{ $ceo['img'] }}" alt="{{ $ceo['name'] }}"
@@ -74,7 +78,8 @@
                             </div>
 
                             <!-- Footer -->
-                            <div class="mt-auto w-full border border-[#FFB71A] rounded-xl p-4 flex items-center justify-between gap-4">
+                            <div
+                                class="mt-auto w-full border border-[#FFB71A] rounded-xl p-4 flex items-center justify-between gap-4">
                                 <div class="text-start">
                                     <div class="text-sm font-bold text-[#FFB71A]">{{ $ceo['name'] }}</div>
                                     <div class="text-xs text-gray-300">Technical Trainer</div>

@@ -1,47 +1,47 @@
 <section id="about-ansys" class="bg-[#FFB71A] py-20 px-4 sm:px-6 lg:px-20 text-black">
     <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
 
-        <!-- KIRI: Gambar responsif -->
-        <div class="relative">
-            <!-- Mobile: gambar bertumpuk biasa -->
-            <div class="flex flex-col space-y-6 lg:hidden">
+        <!-- KIRI: Gambar responsif untuk Desktop -->
+        <div class="relative hidden lg:block">
+            <div class="relative w-full h-[30rem]">
                 <img src="{{ asset('Images/service/A1.png') }}" alt="ANSYS Background"
-                     class="w-full max-w-md mx-auto aspect-[4/3] object-cover rounded-2xl shadow-lg
-                            transition duration-500 ease-in-out transform hover:scale-105 hover:-translate-y-1.5 will-change-transform"
-                     data-aos="fade-up" data-aos-delay="100" data-aos-duration="800" />
+                    class="absolute top-0 left-0 w-[24rem] aspect-[4/3] object-cover rounded-2xl shadow-lg
+                            transition duration-500 ease-in-out transform hover:scale-105 hover:-translate-y-1.5"
+                    data-aos="fade-right" data-aos-delay="100" data-aos-duration="800" />
 
                 <img src="{{ asset('Images/service/A2.png') }}" alt="ANSYS Foreground"
-                     class="w-full max-w-md mx-auto aspect-[6/4] object-cover rounded-2xl shadow-2xl
-                            transition duration-500 ease-in-out transform hover:scale-105 hover:-translate-y-1.5 will-change-transform"
-                     data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" />
-            </div>
-
-            <!-- Desktop: gambar ditumpuk pakai absolute -->
-            <div class="hidden lg:block relative w-full h-[30rem]">
-                <img src="{{ asset('Images/service/A1.png') }}" alt="ANSYS Background"
-                     class="absolute top-0 left-0 w-[24rem] aspect-[4/3] object-cover rounded-2xl shadow-lg
-                            transition duration-500 ease-in-out transform hover:scale-105 hover:-translate-y-1.5 will-change-transform"
-                     data-aos="fade-right" data-aos-delay="100" data-aos-duration="800" />
-
-                <img src="{{ asset('Images/service/A2.png') }}" alt="ANSYS Foreground"
-                     class="absolute top-48 left-40 w-[24rem] aspect-[6/4] object-cover rounded-2xl shadow-2xl
-                            transition duration-500 ease-in-out transform hover:scale-105 hover:-translate-y-1.5 will-change-transform"
-                     data-aos="fade-left" data-aos-delay="200" data-aos-duration="800" />
+                    class="absolute top-48 left-40 w-[24rem] aspect-[4/3] object-cover rounded-2xl shadow-2xl
+                            transition duration-500 ease-in-out transform hover:scale-105 hover:-translate-y-1.5"
+                    data-aos="fade-left" data-aos-delay="200" data-aos-duration="800" />
             </div>
         </div>
 
-        <!-- KANAN: Konten dan grid fitur -->
-        <div class="space-y-8 text-start">
+        <!-- KANAN: Konten -->
+        <div class="space-y-8 text-start flex flex-col">
             <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#12474D] leading-tight" data-aos="fade-up">
                 About ANSYS Capabilities
             </h2>
 
-            <p class="text-base sm:text-lg lg:text-xl leading-relaxed text-gray-800" data-aos="fade-up" data-aos-delay="100">
-                When simulation meets certainty — ANSYS helps you test, iterate, and innovate with confidence before manufacturing begins.
+            <p class="text-base sm:text-lg lg:text-xl leading-relaxed text-gray-800" data-aos="fade-up"
+                data-aos-delay="100">
+                When simulation meets certainty — ANSYS helps you test, iterate, and innovate with confidence before
+                manufacturing begins.
             </p>
 
+            <!-- GAMBAR MOBILE: di bawah paragraf, di atas garis -->
+            <div class="grid grid-cols-2 gap-4 lg:hidden" data-aos="fade-up" data-aos-delay="150">
+                <img src="{{ asset('Images/service/A1.png') }}" alt="ANSYS Background"
+                    class="w-full aspect-square object-cover rounded-2xl shadow-lg
+                            transition duration-500 ease-in-out transform hover:scale-105 hover:-translate-y-1.5" />
+                <img src="{{ asset('Images/service/A2.png') }}" alt="ANSYS Foreground"
+                    class="w-full aspect-square object-cover rounded-2xl shadow-2xl
+                            transition duration-500 ease-in-out transform hover:scale-105 hover:-translate-y-1.5" />
+            </div>
+
+            <!-- Garis -->
             <div class="h-px bg-black/60"></div>
 
+            <!-- Fitur -->
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-x-8 gap-y-6">
                 <div data-aos="fade-up" data-aos-delay="100">
                     <h3 class="text-lg lg:text-xl font-semibold mb-2 text-[#12474D]">Structural Analysis</h3>

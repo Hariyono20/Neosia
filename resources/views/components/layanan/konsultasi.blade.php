@@ -16,8 +16,26 @@
                 </p>
             </div>
 
+             <!-- Gambar GRID (MOBILE SAJA) -->
+            <div class="grid grid-cols-2 gap-8 lg:hidden">
+                @php
+                    $images = ['K1.png', 'K2.png', 'K3.png', 'K4.png'];
+                    $translate = ['translate-y-6', '-translate-y-6', 'translate-y-6', '-translate-y-6'];
+                @endphp
+                @foreach ($images as $index => $img)
+                    <div
+                        class="aspect-square w-full bg-white rounded-xl overflow-hidden shadow-lg {{ $translate[$index] }}
+                               transition duration-500 ease-in-out transform hover:scale-105 hover:shadow-2xl">
+                        <img src="{{ asset('Images/service/' . $img) }}"
+                             class="w-full h-full object-cover"
+                             alt="Image {{ $index + 1 }}">
+                    </div>
+                @endforeach
+            </div>
+
             <!-- Garis -->
             <div class="w-full h-px bg-white/50"></div>
+
 
             <!-- Fitur -->
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
@@ -36,13 +54,8 @@
             </div>
         </div>
 
-        <!-- KANAN: Gambar Grid -->
-        <div class="grid grid-cols-2 gap-8">
-            @php
-                $images = ['K1.png', 'K2.png', 'K3.png', 'K4.png'];
-                $translate = ['translate-y-6', '-translate-y-6', 'translate-y-6', '-translate-y-6'];
-            @endphp
-
+        <!-- Gambar GRID (DESKTOP SAJA) -->
+        <div class="grid grid-cols-2 gap-8 hidden lg:grid">
             @foreach ($images as $index => $img)
                 <div
                     class="aspect-square w-full bg-white rounded-xl overflow-hidden shadow-lg {{ $translate[$index] }}

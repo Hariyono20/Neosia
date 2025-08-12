@@ -48,7 +48,7 @@
             {{-- Highlight Section --}}
             <div class="w-full bg-[#FFB71A] rounded-xl px-4 sm:px-6 lg:px-10 py-12">
                 <div
-                    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-6 text-base font-medium text-black">
+                    class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-3 xl:grid-cols-5 gap-6 text-base font-medium text-black">
                     @php
                         $items = [
                             'Launching Simulating Space',
@@ -62,11 +62,12 @@
                     @foreach ($items as $item)
                         <div class="flex items-start gap-3">
                             <div class="w-1 h-full bg-black rounded"></div>
-                            <p class="leading-snug">{{ $item }}</p>
+                            <p class="leading-snug text-sm sm:text-base">{{ $item }}</p>
                         </div>
                     @endforeach
                 </div>
             </div>
+
 
         </div>
     </div>

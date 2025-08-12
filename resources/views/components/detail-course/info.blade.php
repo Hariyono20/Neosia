@@ -8,27 +8,26 @@
             </h1>
 
             <div class="flex justify-center">
-                <div class="flex flex-col sm:flex-row gap-4 items-center bg-black p-4 rounded-xl max-w-3xl w-full">
+                <div class="flex flex-row flex-wrap gap-3 items-center bg-black p-4 rounded-xl max-w-3xl w-full">
                     <!-- Foto -->
-                    <div class="w-20 h-20 flex justify-center items-center">
+                    <div class="w-16 h-16 sm:w-20 sm:h-20 flex-shrink-0 flex justify-center items-center">
                         <img src="{{ asset('Images/Course_detail/pp.png') }}" alt="Teacher"
                             class="w-full h-full object-cover rounded-lg">
                     </div>
 
                     <!-- Info -->
-                    <div class="w-full">
-                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 text-xs sm:text-sm text-center">
+                    <div class="flex-1 min-w-[200px]">
+                        <div class="grid grid-cols-3 gap-2 text-[10px] sm:text-sm text-center">
                             @foreach ([['icon' => 'fa-solid fa-chalkboard-user', 'label' => 'Teacher', 'value' => 'John Doe'], ['icon' => 'fa-regular fa-calendar', 'label' => 'Last Update', 'value' => '4 Agustus 2025'], ['icon' => 'fa-solid fa-align-left', 'label' => 'Categories', 'value' => 'Business, Data']] as $index => $item)
                                 <div
-                                    class="flex flex-col items-center gap-1 px-1 sm:px-2
-                        {{ $index < 2 ? 'sm:border-r sm:border-gray-600' : '' }}">
+                                    class="flex flex-col items-center gap-1 px-1 sm:px-2 {{ $index < 2 ? 'border-r border-gray-600' : '' }}">
                                     <div class="flex items-center gap-1 justify-center">
-                                        <i class="{{ $item['icon'] }} text-white text-sm sm:text-base"></i>
-                                        <span class="text-gray-300 text-[10px] sm:text-xs font-medium">
+                                        <i class="{{ $item['icon'] }} text-white text-xs sm:text-base"></i>
+                                        <span class="text-gray-300 text-[9px] sm:text-xs font-medium">
                                             {{ $item['label'] }}
                                         </span>
                                     </div>
-                                    <p class="text-white text-sm font-semibold">
+                                    <p class="text-white text-xs sm:text-sm font-semibold">
                                         {{ $item['value'] }}
                                     </p>
                                 </div>
@@ -37,6 +36,7 @@
                     </div>
                 </div>
             </div>
+
 
 
             <!-- Gambar Preview -->
